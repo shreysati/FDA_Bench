@@ -7,11 +7,20 @@ authors = [
     { name = "Shrey Sati", email = "sati.shrey7@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
-
-[project.scripts]
-fda-bench = "fda_bench:main"
+dependencies = [
+    "numpy>=2.5.5",
+    "openai>=3.57.0",
+    "pandas>=3.1.1",
+    "pyyaml>=6.0.4",
+    "requests>=2.34.2",
+]
 
 [build-system]
 requires = ["uv_build>=0.13.5,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
